@@ -1,0 +1,710 @@
+Model {
+  Name			  "ejh44c"
+  Version		  3.00
+  SimParamPage		  "Solver"
+  SampleTimeColors	  off
+  InvariantConstants	  off
+  WideVectorLines	  off
+  ShowLineWidths	  off
+  ShowPortDataTypes	  off
+  StartTime		  "0.0"
+  StopTime		  "10.0"
+  SolverMode		  "Auto"
+  Solver		  "ode45"
+  RelTol		  "1e-3"
+  AbsTol		  "auto"
+  Refine		  "1"
+  MaxStep		  "auto"
+  InitialStep		  "auto"
+  FixedStep		  "auto"
+  MaxOrder		  5
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "Matrix"
+  LimitMaxRows		  off
+  MaxRows		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  "warning"
+  MinStepSizeMsg	  "warning"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  IntegerOverflowMsg	  "warning"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg	  "warning"
+  SignalLabelMismatchMsg  "none"
+  ConsistencyChecking	  "off"
+  ZeroCross		  on
+  SimulationMode	  "normal"
+  BlockDataTips		  on
+  BlockParametersDataTip  on
+  BlockAttributesDataTip  off
+  BlockPortWidthsDataTip  off
+  BlockDescriptionStringDataTip	off
+  BlockMaskParametersDataTip off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  OptimizeBlockIOStorage  on
+  BufferReuse		  on
+  BooleanDataType	  off
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWInlineParameters	  off
+  RTWRetainRTWFile	  off
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "oneshot"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  off
+  Created		  "Sat Jun 16 03:53:32 2001"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "Administrador"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Mon Jul 23 17:38:52 2001"
+  ModelVersionFormat	  "1.%<AutoIncrement:3>"
+  ConfigurationManager	  "none"
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "ejh44c"
+    Location		    [324, 81, 871, 425]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "automatic"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "100"
+    AutoZoom		    on
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Integrator
+      Name		      "Integrator"
+      Ports		      [1, 1, 0, 0, 0]
+      Position		      [400, 120, 430, 150]
+      ExternalReset	      "none"
+      InitialConditionSource  "internal"
+      InitialCondition	      "[0;0;0]"
+      LimitOutput	      off
+      UpperSaturationLimit    "inf"
+      LowerSaturationLimit    "-inf"
+      ShowSaturationPort      off
+      ShowStatePort	      off
+      AbsoluteTolerance	      "auto"
+    }
+    Block {
+      BlockType		      Integrator
+      Name		      "Integrator1"
+      Ports		      [1, 1, 0, 0, 0]
+      Position		      [475, 120, 505, 150]
+      ExternalReset	      "none"
+      InitialConditionSource  "internal"
+      InitialCondition	      "[pi/6;pi/6;pi/18]"
+      LimitOutput	      off
+      UpperSaturationLimit    "inf"
+      LowerSaturationLimit    "-inf"
+      ShowSaturationPort      off
+      ShowStatePort	      off
+      AbsoluteTolerance	      "auto"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Inversa de la\nmatriz de masas"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [285, 105, 375, 165]
+      ShowPortLabels	      on
+      MaskType		      "Término de Coriolis"
+      MaskDescription	      "Este bloque devuelve el par correspondiente al "
+"término de Coriolis."
+      MaskHelp		      "A este bloque hay que darle tres parámetros: 1)"
+" La matriz de parámetros dinámicos del manipulador de acuerdo con el formato "
+"que se explica en la sección \"dyn\" del Apéndice, 2) Un vector columna corre"
+"spondiente a la aceleración de la gravedad, y 3) Un vector columna correspond"
+"iente a las fuerzas externas."
+      MaskPromptString	      "Matriz de parámetros dinámicos:"
+      MaskStyleString	      "edit"
+      MaskTunableValueString  "on"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskVariables	      "dyn=@1;"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "[0 0 0 0 0 4.7 0.8 0 0 0 0 0 0 0 0 0 1 0 0 0;0 "
+"0.8 0 0 0 2.6 0.8 0 0 0 0 0 0 0 0 0 1 0 0 0;0 0.8 0 0 0 1.1 0 0 0 0.05 0.1 0."
+"1 0 0 0 0 1 0 0 0]"
+      System {
+	Name			"Inversa de la\nmatriz de masas"
+	Location		[38, 192, 404, 399]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "q"
+	  Position		  [25, 20, 45, 40]
+	  Port			  "1"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "In"
+	  Position		  [25, 80, 45, 100]
+	  Port			  "2"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  "Masas"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [145, 45, 205, 75]
+	  FunctionName		  "sminv"
+	  Parameters		  "dyn"
+	  PortCounts		  "[]"
+	  SFunctionModules	  "''"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [80, 42, 115, 78]
+	  Inputs		  "2"
+	  DisplayOption		  "none"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "M(q)^(-1) · In"
+	  Position		  [270, 50, 290, 70]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "0"
+	}
+	Line {
+	  SrcBlock		  "Masas"
+	  SrcPort		  1
+	  DstBlock		  "M(q)^(-1) · In"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "In"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  DstBlock		  "Mux"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "q"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  DstBlock		  "Mux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Mux"
+	  SrcPort		  1
+	  DstBlock		  "Masas"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Modelo de\nfricciones1"
+      Ports		      [1, 1, 0, 0, 0]
+      Position		      [40, 18, 200, 82]
+      ShowPortLabels	      on
+      MaskType		      "Modelo de fricciones (viscosa y de Coriolis)"
+      MaskDescription	      "Este bloque calcula el par correspondiente a la"
+" fricciones viscosa y de Coulomb. Para ello se emplea un determinado modelo p"
+"ara dichas fricciones:\n           B·q' + Tc + ,  si q'>0\n           B·q' + "
+"Tc - ,  si q'<0"
+      MaskPromptString	      "Factores de reducción (G):|Fricciones viscosas,"
+" referidas al motor:|Fricciones de Coulomb (rotación +), referidas al motor:|"
+"Fricciones de Coulomb (rotación -), referidas al motor:"
+      MaskStyleString	      "edit,edit,edit,edit"
+      MaskTunableValueString  "on,on,on,on"
+      MaskCallbackString      "|||"
+      MaskEnableString	      "on,on,on,on"
+      MaskVisibilityString    "on,on,on,on"
+      MaskVariables	      "G=@1;b=@2;tcp=@3;tcm=@4;"
+      MaskDisplay	      "disp('B·q'' + Tc + ,  si q''>0\\n')\ndisp('\\nB"
+"·q'' + Tc - ,  si q''<0')"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "1|[5 5 5]|[0 0 0]|[0 0 0]"
+      System {
+	Name			"Modelo de\nfricciones1"
+	Location		[46, 200, 397, 352]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "q'"
+	  Position		  [50, 50, 70, 70]
+	  Port			  "1"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  "Fricciones"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [145, 45, 205, 75]
+	  FunctionName		  "sfriction"
+	  Parameters		  "G,b,tcp,tcm"
+	  PortCounts		  "[]"
+	  SFunctionModules	  "''"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "tau_f"
+	  Position		  [270, 50, 290, 70]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "0"
+	}
+	Line {
+	  SrcBlock		  "q'"
+	  SrcPort		  1
+	  DstBlock		  "Fricciones"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Fricciones"
+	  SrcPort		  1
+	  DstBlock		  "tau_f"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum"
+      Ports		      [4, 1, 0, 0, 0]
+      Position		      [240, 127, 270, 173]
+      IconShape		      "rectangular"
+      Inputs		      "---+"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace"
+      Position		      [365, 45, 425, 75]
+      VariableName	      "q"
+      Buffer		      "inf"
+      Decimation	      "1"
+      SampleTime	      "-1"
+      SaveFormat	      "Matrix"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Términos\ngravitatorios1"
+      Ports		      [1, 1, 0, 0, 0]
+      Position		      [95, 210, 145, 270]
+      ShowPortLabels	      on
+      MaskType		      "Término gravitatorio"
+      MaskDescription	      "Este bloque calcula el par correspondiente al t"
+"érmino gravitatorio."
+      MaskPromptString	      "Matriz de parámetros cinemáticos y dinámicos:|V"
+"ector aceleración de la gravedad:"
+      MaskStyleString	      "edit,edit"
+      MaskTunableValueString  "on,on"
+      MaskCallbackString      "|"
+      MaskEnableString	      "on,on"
+      MaskVisibilityString    "on,on"
+      MaskVariables	      "dyn=@1;grav=@2;"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "[0 0 0 0 0 4.7 0.8 0 0 0 0 0 0 0 0 0 1 0 0 0;0 "
+"0.8 0 0 0 2.6 0.8 0 0 0 0 0 0 0 0 0 1 0 0 0;0 0.8 0 0 0 1.1 0 0 0 0.05 0.1 0."
+"1 0 0 0 0 1 0 0 0]|[0 -9.8 0]"
+      System {
+	Name			"Términos\ngravitatorios1"
+	Location		[42, 196, 380, 318]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "q"
+	  Position		  [50, 50, 70, 70]
+	  Port			  "1"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  "Gravedad"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [145, 45, 205, 75]
+	  FunctionName		  "sgravity"
+	  Parameters		  "dyn,grav"
+	  PortCounts		  "[]"
+	  SFunctionModules	  "''"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "G (q)"
+	  Position		  [270, 50, 290, 70]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "0"
+	}
+	Line {
+	  SrcBlock		  "q"
+	  SrcPort		  1
+	  DstBlock		  "Gravedad"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Gravedad"
+	  SrcPort		  1
+	  DstBlock		  "G (q)"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Términos centrífugos\ny de Coriolis"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [95, 116, 145, 174]
+      ShowPortLabels	      on
+      MaskType		      "Término de Coriolis"
+      MaskDescription	      "Este bloque devuelve el par correspondiente al "
+"término de Coriolis."
+      MaskHelp		      "A este bloque hay que darle tres parámetros: 1)"
+" La matriz de parámetros dinámicos del manipulador de acuerdo con el formato "
+"que se explica en la sección \"dyn\" del Apéndice, 2) Un vector columna corre"
+"spondiente a la aceleración de la gravedad, y 3) Un vector columna correspond"
+"iente a las fuerzas externas."
+      MaskPromptString	      "Matriz de parámetros dinámicos:"
+      MaskStyleString	      "edit"
+      MaskTunableValueString  "on"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskVariables	      "dyn=@1;"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "[0 0 0 0 0 4.7 0.8 0 0 0 0 0 0 0 0 0 1 0 0 0;0 "
+"0.8 0 0 0 2.6 0.8 0 0 0 0 0 0 0 0 0 1 0 0 0;0 0.8 0 0 0 1.1 0 0 0 0.05 0.1 0."
+"1 0 0 0 0 1 0 0 0]"
+      System {
+	Name			"Términos centrífugos\ny de Coriolis"
+	Location		[38, 192, 404, 399]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "q"
+	  Position		  [25, 20, 45, 40]
+	  Port			  "1"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "q'"
+	  Position		  [25, 80, 45, 100]
+	  Port			  "2"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  "Centrífugos\ny Coriolis"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [145, 45, 205, 75]
+	  FunctionName		  "scoriolis"
+	  Parameters		  "dyn"
+	  PortCounts		  "[]"
+	  SFunctionModules	  "''"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [80, 42, 115, 78]
+	  Inputs		  "2"
+	  DisplayOption		  "none"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "V (q,q')"
+	  Position		  [270, 50, 290, 70]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "0"
+	}
+	Line {
+	  SrcBlock		  "Centrífugos\ny Coriolis"
+	  SrcPort		  1
+	  DstBlock		  "V (q,q')"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "q'"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  DstBlock		  "Mux"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "q"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  DstBlock		  "Mux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Mux"
+	  SrcPort		  1
+	  DstBlock		  "Centrífugos\ny Coriolis"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Display
+      Name		      "q"
+      Ports		      [1, 0, 0, 0, 0]
+      Position		      [285, 207, 375, 273]
+      Format		      "short"
+      Decimation	      "1"
+      Floating		      off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "tau"
+      Position		      [165, 249, 220, 281]
+      Value		      "[0;0;0]"
+    }
+    Line {
+      SrcBlock		      "Términos centrífugos\ny de Coriolis"
+      SrcPort		      1
+      DstBlock		      "Sum"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Sum"
+      SrcPort		      1
+      DstBlock		      "Inversa de la\nmatriz de masas"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Inversa de la\nmatriz de masas"
+      SrcPort		      1
+      DstBlock		      "Integrator"
+      DstPort		      1
+    }
+    Line {
+      Labels		      [1, 0]
+      SrcBlock		      "Integrator"
+      SrcPort		      1
+      Points		      [15, 0]
+      Branch {
+	DstBlock		"Integrator1"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 170; -425, 0; 0, -145]
+	Branch {
+	  DstBlock		  "Términos centrífugos\ny de Coriolis"
+	  DstPort		  2
+	}
+	Branch {
+	  DstBlock		  "Modelo de\nfricciones1"
+	  DstPort		  1
+	}
+      }
+    }
+    Line {
+      Labels		      [0, 0]
+      SrcBlock		      "Integrator1"
+      SrcPort		      1
+      Points		      [20, 0]
+      Branch {
+	Points			[0, 190; -275, 0]
+	Branch {
+	  Points		  [0, -85]
+	  DstBlock		  "q"
+	  DstPort		  1
+	}
+	Branch {
+	  Points		  [-200, 0; 0, -85]
+	  Branch {
+	    Points		    [0, -110]
+	    DstBlock		    "Términos centrífugos\ny de Coriolis"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Términos\ngravitatorios1"
+	    DstPort		    1
+	  }
+	}
+      }
+      Branch {
+	Labels			[2, 0]
+	Points			[0, -115; -270, 0; 0, 40]
+	Branch {
+	  DstBlock		  "To Workspace"
+	  DstPort		  1
+	}
+	Branch {
+	  Points		  [0, 60]
+	  DstBlock		  "Inversa de la\nmatriz de masas"
+	  DstPort		  1
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "tau"
+      SrcPort		      1
+      DstBlock		      "Sum"
+      DstPort		      4
+    }
+    Line {
+      SrcBlock		      "Términos\ngravitatorios1"
+      SrcPort		      1
+      Points		      [60, 0; 0, -85]
+      DstBlock		      "Sum"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Modelo de\nfricciones1"
+      SrcPort		      1
+      Points		      [20, 0]
+      DstBlock		      "Sum"
+      DstPort		      1
+    }
+    Annotation {
+      Position		      [450, 123]
+      Text		      "q'"
+    }
+    Annotation {
+      Position		      [387, 122]
+      Text		      "q''"
+    }
+    Annotation {
+      Position		      [517, 125]
+      Text		      "q"
+    }
+  }
+}

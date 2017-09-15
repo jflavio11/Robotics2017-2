@@ -1,0 +1,1455 @@
+Model {
+  Name			  "ejh54"
+  Version		  3.00
+  SimParamPage		  "Solver"
+  SampleTimeColors	  off
+  InvariantConstants	  off
+  WideVectorLines	  off
+  ShowLineWidths	  off
+  ShowPortDataTypes	  off
+  StartTime		  "0.0"
+  StopTime		  "10.0"
+  SolverMode		  "Auto"
+  Solver		  "ode45"
+  RelTol		  "1e-3"
+  AbsTol		  "auto"
+  Refine		  "1"
+  MaxStep		  "auto"
+  InitialStep		  "auto"
+  FixedStep		  "auto"
+  MaxOrder		  5
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "Matrix"
+  LimitMaxRows		  off
+  MaxRows		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  "warning"
+  MinStepSizeMsg	  "warning"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  IntegerOverflowMsg	  "warning"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg	  "warning"
+  SignalLabelMismatchMsg  "none"
+  ConsistencyChecking	  "off"
+  ZeroCross		  on
+  SimulationMode	  "normal"
+  BlockDataTips		  on
+  BlockParametersDataTip  on
+  BlockAttributesDataTip  off
+  BlockPortWidthsDataTip  off
+  BlockDescriptionStringDataTip	off
+  BlockMaskParametersDataTip off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  OptimizeBlockIOStorage  on
+  BufferReuse		  on
+  BooleanDataType	  off
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWInlineParameters	  off
+  RTWRetainRTWFile	  off
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "oneshot"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  off
+  Created		  "Mon Jul 23 16:55:14 2001"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "Administrador"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Mon Jul 23 17:10:27 2001"
+  ModelVersionFormat	  "1.%<AutoIncrement:8>"
+  ConfigurationManager	  "none"
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "ejh54"
+    Location		    [322, 83, 957, 480]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "automatic"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "100"
+    AutoZoom		    on
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Clock
+      Name		      "Clock"
+      Position		      [15, 115, 35, 135]
+      DisplayTime	      off
+      Decimation	      "10"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Control PID"
+      Ports		      [5, 1, 0, 0, 0]
+      Position		      [295, 88, 350, 162]
+      ShowPortLabels	      on
+      MaskType		      "Controlador PID"
+      MaskDescription	      "Calcula el par tau_r correspondiente a la técni"
+"ca del par computado usando un controlador PID."
+      MaskPromptString	      "Introduzca la matriz Kp:|Introduzca la matriz K"
+"v:|Introduzca la matriz Ki:"
+      MaskStyleString	      "edit,edit,edit"
+      MaskTunableValueString  "on,on,on"
+      MaskCallbackString      "||"
+      MaskEnableString	      "on,on,on"
+      MaskVisibilityString    "on,on,on"
+      MaskVariables	      "Kp=@1;Kv=@2;Ki=@3;"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "[25 0;0 25]|[10 0;0 10]|[100 0;0 100]"
+      System {
+	Name			"Control PID"
+	Location		[64, 89, 587, 446]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "qd"
+	  Position		  [40, 95, 60, 115]
+	  Port			  "1"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "q"
+	  Position		  [40, 145, 60, 165]
+	  Port			  "2"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "qd'"
+	  Position		  [40, 190, 60, 210]
+	  Port			  "3"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "q'"
+	  Position		  [40, 240, 60, 260]
+	  Port			  "4"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "qd''"
+	  Position		  [40, 290, 60, 310]
+	  Port			  "5"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [290, 35, 320, 65]
+	  ExternalReset		  "none"
+	  InitialConditionSource  "internal"
+	  InitialCondition	  "0"
+	  LimitOutput		  off
+	  UpperSaturationLimit	  "inf"
+	  LowerSaturationLimit	  "-inf"
+	  ShowSaturationPort	  off
+	  ShowStatePort		  off
+	  AbsoluteTolerance	  "auto"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Ki"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [195, 35, 225, 65]
+	  SourceBlock		  "HEMERO/Robots\nmanipuladores\nbase fija/Con"
+"trol basado\nen el modelo/Par\nComputado/Control PID/Ki"
+	  SourceType		  "Matrix Gain"
+	  MaskParam1		  "Ki"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Kp"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [195, 115, 225, 145]
+	  SourceBlock		  "HEMERO/Robots\nmanipuladores\nbase fija/Con"
+"trol basado\nen el modelo/Par\nComputado/Control PID/Kp"
+	  SourceType		  "Matrix Gain"
+	  MaskParam1		  "Kp"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Kv"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [195, 210, 225, 240]
+	  SourceBlock		  "HEMERO/Robots\nmanipuladores\nbase fija/Con"
+"trol basado\nen el modelo/Par\nComputado/Control PID/Kv"
+	  SourceType		  "Matrix Gain"
+	  MaskParam1		  "Kv"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [110, 112, 140, 143]
+	  IconShape		  "rectangular"
+	  Inputs		  "+-"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum1"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [110, 207, 140, 238]
+	  IconShape		  "rectangular"
+	  Inputs		  "+-"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum2"
+	  Ports			  [4, 1, 0, 0, 0]
+	  Position		  [405, 199, 435, 241]
+	  IconShape		  "rectangular"
+	  Inputs		  "++++"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "tau_r"
+	  Position		  [475, 210, 495, 230]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "0"
+	}
+	Line {
+	  SrcBlock		  "Sum2"
+	  SrcPort		  1
+	  DstBlock		  "tau_r"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum1"
+	  SrcPort		  1
+	  DstBlock		  "Kv"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "q'"
+	  SrcPort		  1
+	  Points		  [30, 0]
+	  DstBlock		  "Sum1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "qd'"
+	  SrcPort		  1
+	  Points		  [30, 0]
+	  DstBlock		  "Sum1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "q"
+	  SrcPort		  1
+	  Points		  [30, 0]
+	  DstBlock		  "Sum"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "qd"
+	  SrcPort		  1
+	  Points		  [30, 0]
+	  DstBlock		  "Sum"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "qd''"
+	  SrcPort		  1
+	  Points		  [205, 0; 0, -65]
+	  DstBlock		  "Sum2"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "Kv"
+	  SrcPort		  1
+	  DstBlock		  "Sum2"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Kp"
+	  SrcPort		  1
+	  Points		  [40, 0; 0, 85]
+	  DstBlock		  "Sum2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Sum"
+	  SrcPort		  1
+	  Points		  [30, 0]
+	  Branch {
+	    DstBlock		    "Kp"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -80]
+	    DstBlock		    "Ki"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Ki"
+	  SrcPort		  1
+	  DstBlock		  "Integrator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Integrator"
+	  SrcPort		  1
+	  Points		  [30, 0; 0, 155]
+	  DstBlock		  "Sum2"
+	  DstPort		  1
+	}
+	Annotation {
+	  Position		  [164, 122]
+	  Text			  "e"
+	}
+	Annotation {
+	  Position		  [164, 219]
+	  Text			  "e'"
+	}
+      }
+    }
+    Block {
+      BlockType		      Display
+      Name		      "Display"
+      Ports		      [1, 0, 0, 0, 0]
+      Position		      [70, 300, 160, 330]
+      Format		      "short"
+      Decimation	      "1"
+      Floating		      off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Estimada1"
+      Ports		      [1, 1, 0, 0, 0]
+      Position		      [395, 29, 450, 71]
+      ShowPortLabels	      on
+      MaskType		      "Término gravitatorio"
+      MaskDescription	      "Este bloque calcula el par correspondiente al t"
+"érmino gravitatorio."
+      MaskPromptString	      "Matriz de parámetros cinemáticos y dinámicos:|V"
+"ector aceleración de la gravedad:"
+      MaskStyleString	      "edit,edit"
+      MaskTunableValueString  "on,on"
+      MaskCallbackString      "|"
+      MaskEnableString	      "on,on"
+      MaskVisibilityString    "on,on"
+      MaskVariables	      "dyn=@1;grav=@2;"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "[0 0 0 0 0 2.1 3 0 0 0 0 0 0 0 0 0 1 0 0 0;0 3 "
+"0 0 0 0.9 1 0 0 0 0 0 0 0 0 0 1 0 0 0]|[0 -9.81 0]"
+      System {
+	Name			"Estimada1"
+	Location		[42, 196, 380, 318]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "q"
+	  Position		  [50, 50, 70, 70]
+	  Port			  "1"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  "Gravedad"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [145, 45, 205, 75]
+	  FunctionName		  "sgravity"
+	  Parameters		  "dyn,grav"
+	  PortCounts		  "[]"
+	  SFunctionModules	  "''"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "G (q)"
+	  Position		  [270, 50, 290, 70]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "0"
+	}
+	Line {
+	  SrcBlock		  "q"
+	  SrcPort		  1
+	  DstBlock		  "Gravedad"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Gravedad"
+	  SrcPort		  1
+	  DstBlock		  "G (q)"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Estimada2"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [395, 86, 450, 139]
+      ShowPortLabels	      on
+      MaskType		      "Término asociado a la matriz de masas"
+      MaskDescription	      "Este bloque calcula el par correspondiente al t"
+"érmino en el que aparece la matriz de masas."
+      MaskPromptString	      "Matriz de parámetros cinemáticos y dinámicos:"
+      MaskStyleString	      "edit"
+      MaskTunableValueString  "on"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskVariables	      "dyn=@1;"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "[0 0 0 0 0 2.1 3 0 0 0 0 0 0 0 0 0 1 0 0 0;0 3 "
+"0 0 0 0.9 1 0 0 0 0 0 0 0 0 0 1 0 0 0]"
+      System {
+	Name			"Estimada2"
+	Location		[44, 198, 363, 328]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "q"
+	  Position		  [25, 20, 45, 40]
+	  Port			  "1"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "In"
+	  Position		  [25, 80, 45, 100]
+	  Port			  "2"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  "Masas"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [145, 45, 205, 75]
+	  FunctionName		  "sinertia"
+	  Parameters		  "dyn"
+	  PortCounts		  "[]"
+	  SFunctionModules	  "''"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [80, 42, 115, 78]
+	  Inputs		  "2"
+	  DisplayOption		  "none"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "M (q)·In"
+	  Position		  [270, 50, 290, 70]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "0"
+	}
+	Line {
+	  SrcBlock		  "Mux"
+	  SrcPort		  1
+	  DstBlock		  "Masas"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "q"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  DstBlock		  "Mux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "In"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  DstBlock		  "Mux"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Masas"
+	  SrcPort		  1
+	  DstBlock		  "M (q)·In"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Estimada3"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [395, 158, 450, 202]
+      ShowPortLabels	      on
+      MaskType		      "Términos centrífugos y de Coriolis"
+      MaskDescription	      "Este bloque calcula el par correspondiente a lo"
+"s términos centrífugos y de Coriolis."
+      MaskPromptString	      "Matriz de parámetros cinemáticos y dinámicos:"
+      MaskStyleString	      "edit"
+      MaskTunableValueString  "on"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskVariables	      "dyn=@1;"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "[0 0 0 0 0 2.1 3 0 0 0 0 0 0 0 0 0 1 0 0 0;0 3 "
+"0 0 0 0.9 1 0 0 0 0 0 0 0 0 0 1 0 0 0]"
+      System {
+	Name			"Estimada3"
+	Location		[42, 196, 358, 327]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "q"
+	  Position		  [25, 20, 45, 40]
+	  Port			  "1"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "q'"
+	  Position		  [25, 80, 45, 100]
+	  Port			  "2"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  "Centrífugos\ny Coriolis"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [145, 45, 205, 75]
+	  FunctionName		  "scoriolis"
+	  Parameters		  "dyn"
+	  PortCounts		  "[]"
+	  SFunctionModules	  "''"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [80, 42, 115, 78]
+	  Inputs		  "2"
+	  DisplayOption		  "none"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "V (q,q')"
+	  Position		  [270, 50, 290, 70]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "0"
+	}
+	Line {
+	  SrcBlock		  "Mux"
+	  SrcPort		  1
+	  DstBlock		  "Centrífugos\ny Coriolis"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "q"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  DstBlock		  "Mux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "q'"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  DstBlock		  "Mux"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Centrífugos\ny Coriolis"
+	  SrcPort		  1
+	  DstBlock		  "V (q,q')"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Integrator
+      Name		      "Integrator"
+      Ports		      [1, 1, 0, 0, 0]
+      Position		      [290, 260, 320, 290]
+      Orientation	      "left"
+      NamePlacement	      "alternate"
+      ExternalReset	      "none"
+      InitialConditionSource  "internal"
+      InitialCondition	      "[0;0]"
+      LimitOutput	      off
+      UpperSaturationLimit    "inf"
+      LowerSaturationLimit    "-inf"
+      ShowSaturationPort      off
+      ShowStatePort	      off
+      AbsoluteTolerance	      "auto"
+    }
+    Block {
+      BlockType		      Integrator
+      Name		      "Integrator1"
+      Ports		      [1, 1, 0, 0, 0]
+      Position		      [210, 260, 240, 290]
+      Orientation	      "left"
+      NamePlacement	      "alternate"
+      ExternalReset	      "none"
+      InitialConditionSource  "internal"
+      InitialCondition	      "[0; 0]"
+      LimitOutput	      off
+      UpperSaturationLimit    "inf"
+      LowerSaturationLimit    "-inf"
+      ShowSaturationPort      off
+      ShowStatePort	      off
+      AbsoluteTolerance	      "auto"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [205, 47, 240, 83]
+      Inputs		      "2"
+      DisplayOption	      "none"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux1"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [205, 107, 240, 143]
+      Inputs		      "2"
+      DisplayOption	      "none"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux2"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [205, 177, 240, 213]
+      Inputs		      "2"
+      DisplayOption	      "none"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Real1"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [540, 231, 585, 269]
+      Orientation	      "left"
+      NamePlacement	      "alternate"
+      ShowPortLabels	      on
+      MaskType		      "Términos centrífugos y de Coriolis"
+      MaskDescription	      "Este bloque calcula el par correspondiente a lo"
+"s términos centrífugos y de Coriolis."
+      MaskPromptString	      "Matriz de parámetros cinemáticos y dinámicos:"
+      MaskStyleString	      "edit"
+      MaskTunableValueString  "on"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskVariables	      "dyn=@1;"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "[0 0 0 0 0 2 3 0 0 0 0 0 0 0 0 0 1 0 0 0;0 3 0 "
+"0 0 1 1 0 0 0 0 0 0 0 0 0 1 0 0 0]"
+      System {
+	Name			"Real1"
+	Location		[42, 196, 358, 327]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "q"
+	  Position		  [25, 20, 45, 40]
+	  Port			  "1"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "q'"
+	  Position		  [25, 80, 45, 100]
+	  Port			  "2"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  "Centrífugos\ny Coriolis"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [145, 45, 205, 75]
+	  FunctionName		  "scoriolis"
+	  Parameters		  "dyn"
+	  PortCounts		  "[]"
+	  SFunctionModules	  "''"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [80, 42, 115, 78]
+	  Inputs		  "2"
+	  DisplayOption		  "none"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "V (q,q')"
+	  Position		  [270, 50, 290, 70]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "0"
+	}
+	Line {
+	  SrcBlock		  "Mux"
+	  SrcPort		  1
+	  DstBlock		  "Centrífugos\ny Coriolis"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "q"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  DstBlock		  "Mux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "q'"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  DstBlock		  "Mux"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Centrífugos\ny Coriolis"
+	  SrcPort		  1
+	  DstBlock		  "V (q,q')"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Real2"
+      Ports		      [1, 1, 0, 0, 0]
+      Position		      [540, 290, 585, 330]
+      Orientation	      "left"
+      NamePlacement	      "alternate"
+      ShowPortLabels	      on
+      MaskType		      "Término gravitatorio"
+      MaskDescription	      "Este bloque calcula el par correspondiente al t"
+"érmino gravitatorio."
+      MaskPromptString	      "Matriz de parámetros cinemáticos y dinámicos:|V"
+"ector aceleración de la gravedad:"
+      MaskStyleString	      "edit,edit"
+      MaskTunableValueString  "on,on"
+      MaskCallbackString      "|"
+      MaskEnableString	      "on,on"
+      MaskVisibilityString    "on,on"
+      MaskVariables	      "dyn=@1;grav=@2;"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "[0 0 0 0 0 2 3 0 0 0 0 0 0 0 0 0 1 0 0 0;0 3 0 "
+"0 0 1 1 0 0 0 0 0 0 0 0 0 1 0 0 0]|[0 -9.81 0]"
+      System {
+	Name			"Real2"
+	Location		[42, 196, 380, 318]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "q"
+	  Position		  [50, 50, 70, 70]
+	  Port			  "1"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  "Gravedad"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [145, 45, 205, 75]
+	  FunctionName		  "sgravity"
+	  Parameters		  "dyn,grav"
+	  PortCounts		  "[]"
+	  SFunctionModules	  "''"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "G (q)"
+	  Position		  [270, 50, 290, 70]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "0"
+	}
+	Line {
+	  SrcBlock		  "q"
+	  SrcPort		  1
+	  DstBlock		  "Gravedad"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Gravedad"
+	  SrcPort		  1
+	  DstBlock		  "G (q)"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Real3"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [355, 255, 435, 295]
+      Orientation	      "left"
+      NamePlacement	      "alternate"
+      ShowPortLabels	      on
+      MaskType		      "Inversa de la matriz de masas"
+      MaskDescription	      "Este bloque calcula el producto de la inversa d"
+"e la matriz de masas por el vector columna In que se le pasa como entrada."
+      MaskPromptString	      "Matriz de parámetros cinemáticos y dinámicos:"
+      MaskStyleString	      "edit"
+      MaskTunableValueString  "on"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskVariables	      "dyn=@1;"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "[0 0 0 0 0 2 3 0 0 0 0 0 0 0 0 0 1 0 0 0;0 3 0 "
+"0 0 1 1 0 0 0 0 0 0 0 0 0 1 0 0 0]"
+      System {
+	Name			"Real3"
+	Location		[44, 198, 379, 337]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "q"
+	  Position		  [25, 20, 45, 40]
+	  Port			  "1"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "In"
+	  Position		  [25, 80, 45, 100]
+	  Port			  "2"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  "Masas"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [145, 45, 205, 75]
+	  FunctionName		  "sminv"
+	  Parameters		  "dyn"
+	  PortCounts		  "[]"
+	  SFunctionModules	  "''"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [80, 42, 115, 78]
+	  Inputs		  "2"
+	  DisplayOption		  "none"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "M(q)^(-1) · In"
+	  Position		  [270, 50, 290, 70]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "0"
+	}
+	Line {
+	  SrcBlock		  "Mux"
+	  SrcPort		  1
+	  DstBlock		  "Masas"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "q"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  DstBlock		  "Mux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "In"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  DstBlock		  "Mux"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Masas"
+	  SrcPort		  1
+	  DstBlock		  "M(q)^(-1) · In"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum"
+      Ports		      [3, 1, 0, 0, 0]
+      Position		      [475, 91, 505, 139]
+      IconShape		      "rectangular"
+      Inputs		      "+++"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum2"
+      Ports		      [3, 1, 0, 0, 0]
+      Position		      [465, 260, 495, 310]
+      Orientation	      "left"
+      NamePlacement	      "alternate"
+      IconShape		      "rectangular"
+      Inputs		      "+--"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace"
+      Position		      [55, 260, 115, 290]
+      Orientation	      "left"
+      NamePlacement	      "alternate"
+      VariableName	      "q"
+      Buffer		      "inf"
+      Decimation	      "1"
+      SampleTime	      "-1"
+      SaveFormat	      "Matrix"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace1"
+      Position		      [285, 15, 345, 45]
+      VariableName	      "qd"
+      Buffer		      "inf"
+      Decimation	      "1"
+      SampleTime	      "-1"
+      SaveFormat	      "Matrix"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace2"
+      Position		      [535, 145, 595, 175]
+      VariableName	      "tau"
+      Buffer		      "inf"
+      Decimation	      "1"
+      SampleTime	      "-1"
+      SaveFormat	      "Matrix"
+    }
+    Block {
+      BlockType		      Fcn
+      Name		      "qd''1"
+      Position		      [55, 168, 180, 182]
+      Expr		      "-0.15*(pi/2)^2*sin((pi/2)*u)"
+    }
+    Block {
+      BlockType		      Fcn
+      Name		      "qd''2"
+      Position		      [55, 207, 180, 223]
+      Expr		      "-0.15*(pi/2)^2*cos((pi/2)*u)"
+    }
+    Block {
+      BlockType		      Fcn
+      Name		      "qd'1"
+      Position		      [60, 104, 175, 116]
+      Expr		      "0.15*(pi/2)*cos((pi/2)*u)"
+    }
+    Block {
+      BlockType		      Fcn
+      Name		      "qd'2"
+      Position		      [60, 133, 175, 147]
+      Expr		      "-0.15*(pi/2)*sin((pi/2)*u)"
+    }
+    Block {
+      BlockType		      Fcn
+      Name		      "qd1"
+      Position		      [70, 44, 160, 56]
+      Expr		      "0.15*sin((pi/2)*u)"
+    }
+    Block {
+      BlockType		      Fcn
+      Name		      "qd2"
+      Position		      [70, 74, 160, 86]
+      Expr		      "0.15*cos((pi/2)*u)"
+    }
+    Line {
+      SrcBlock		      "Sum"
+      SrcPort		      1
+      Points		      [5, 0; 0, 45]
+      Branch {
+	DstBlock		"To Workspace2"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 110]
+	DstBlock		"Sum2"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Mux"
+      SrcPort		      1
+      Points		      [5, 0]
+      Branch {
+	Points			[0, -35]
+	DstBlock		"To Workspace1"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 30]
+	DstBlock		"Control PID"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Control PID"
+      SrcPort		      1
+      DstBlock		      "Estimada2"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Clock"
+      SrcPort		      1
+      Points		      [0, 0]
+      Branch {
+	Points			[0, -15]
+	Branch {
+	  DstBlock		  "qd'1"
+	  DstPort		  1
+	}
+	Branch {
+	  Points		  [0, -30]
+	  Branch {
+	    Points		    [0, 0]
+	    DstBlock		    "qd2"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -30]
+	    DstBlock		    "qd1"
+	    DstPort		    1
+	  }
+	}
+      }
+      Branch {
+	Points			[0, 15]
+	Branch {
+	  DstBlock		  "qd'2"
+	  DstPort		  1
+	}
+	Branch {
+	  Points		  [0, 35]
+	  Branch {
+	    DstBlock		    "qd''1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 40]
+	    Branch {
+	      DstBlock		      "qd''2"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, 100]
+	      DstBlock		      "Display"
+	      DstPort		      1
+	    }
+	  }
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "qd1"
+      SrcPort		      1
+      Points		      [25, 0]
+      DstBlock		      "Mux"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "qd2"
+      SrcPort		      1
+      Points		      [25, 0]
+      DstBlock		      "Mux"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "qd'1"
+      SrcPort		      1
+      Points		      [10, 0]
+      DstBlock		      "Mux1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "qd'2"
+      SrcPort		      1
+      Points		      [10, 0]
+      DstBlock		      "Mux1"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "qd''1"
+      SrcPort		      1
+      Points		      [5, 0]
+      DstBlock		      "Mux2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "qd''2"
+      SrcPort		      1
+      Points		      [5, 0]
+      DstBlock		      "Mux2"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Mux1"
+      SrcPort		      1
+      DstBlock		      "Control PID"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Mux2"
+      SrcPort		      1
+      Points		      [5, 0; 0, -40]
+      DstBlock		      "Control PID"
+      DstPort		      5
+    }
+    Line {
+      SrcBlock		      "Estimada2"
+      SrcPort		      1
+      DstBlock		      "Sum"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Estimada1"
+      SrcPort		      1
+      Points		      [5, 0]
+      DstBlock		      "Sum"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Estimada3"
+      SrcPort		      1
+      Points		      [5, 0]
+      DstBlock		      "Sum"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Real2"
+      SrcPort		      1
+      Points		      [-10, 0; 0, -10]
+      DstBlock		      "Sum2"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Real1"
+      SrcPort		      1
+      Points		      [-10, 0; 0, 35]
+      DstBlock		      "Sum2"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Sum2"
+      SrcPort		      1
+      DstBlock		      "Real3"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Integrator"
+      SrcPort		      1
+      Points		      [-10, 0]
+      Branch {
+	DstBlock		"Integrator1"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -85]
+	Branch {
+	  Points		  [0, -50]
+	  DstBlock		  "Control PID"
+	  DstPort		  4
+	}
+	Branch {
+	  DstBlock		  "Estimada3"
+	  DstPort		  2
+	}
+      }
+      Branch {
+	Points			[0, 70; 330, 0; 0, -85]
+	DstBlock		"Real1"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "Integrator1"
+      SrcPort		      1
+      Points		      [-10, 0]
+      Branch {
+	Points			[0, -40; 65, 0; 0, -125]
+	Branch {
+	  DstBlock		  "Control PID"
+	  DstPort		  2
+	}
+	Branch {
+	  Points		  [0, -60; 115, 0]
+	  Branch {
+	    DstBlock		    "Estimada1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 50]
+	    Branch {
+	      DstBlock		      "Estimada2"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, 70]
+	      DstBlock		      "Estimada3"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    Points		    [0, -40; 240, 0; 0, 230]
+	    Branch {
+	      DstBlock		      "Real1"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, 70]
+	      DstBlock		      "Real2"
+	      DstPort		      1
+	    }
+	  }
+	}
+      }
+      Branch {
+	DstBlock		"To Workspace"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 40; 260, 0; 0, -50]
+	DstBlock		"Real3"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Real3"
+      SrcPort		      1
+      DstBlock		      "Integrator"
+      DstPort		      1
+    }
+    Annotation {
+      Position		      [518, 108]
+      Text		      "tau"
+    }
+    Annotation {
+      Position		      [171, 284]
+      Text		      "q"
+    }
+    Annotation {
+      Position		      [256, 284]
+      Text		      "q'"
+    }
+    Annotation {
+      Position		      [332, 285]
+      Text		      "q''"
+    }
+  }
+}

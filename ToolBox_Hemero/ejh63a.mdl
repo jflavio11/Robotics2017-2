@@ -1,0 +1,865 @@
+Model {
+  Name			  "ejh62a"
+  Version		  3.00
+  SimParamPage		  "Solver"
+  SampleTimeColors	  off
+  InvariantConstants	  off
+  WideVectorLines	  off
+  ShowLineWidths	  off
+  ShowPortDataTypes	  off
+  StartTime		  "0.0"
+  StopTime		  "10.0"
+  SolverMode		  "Auto"
+  Solver		  "ode45"
+  RelTol		  "1e-3"
+  AbsTol		  "auto"
+  Refine		  "1"
+  MaxStep		  "auto"
+  InitialStep		  "auto"
+  FixedStep		  "auto"
+  MaxOrder		  5
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "Matrix"
+  LimitMaxRows		  off
+  MaxRows		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  "warning"
+  MinStepSizeMsg	  "warning"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  IntegerOverflowMsg	  "warning"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg	  "warning"
+  SignalLabelMismatchMsg  "none"
+  ConsistencyChecking	  "off"
+  ZeroCross		  on
+  SimulationMode	  "normal"
+  BlockDataTips		  on
+  BlockParametersDataTip  on
+  BlockAttributesDataTip  off
+  BlockPortWidthsDataTip  off
+  BlockDescriptionStringDataTip	off
+  BlockMaskParametersDataTip off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  OptimizeBlockIOStorage  on
+  BufferReuse		  on
+  BooleanDataType	  off
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWInlineParameters	  off
+  RTWRetainRTWFile	  off
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "oneshot"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  off
+  Created		  "Fri Jan 05 05:17:24 2001"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "Administrador"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Wed Jul 18 18:43:07 2001"
+  ModelVersionFormat	  "1.%<AutoIncrement:41>"
+  ConfigurationManager	  "none"
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "ejh62a"
+    Location		    [338, 74, 798, 430]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "automatic"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "100"
+    AutoZoom		    on
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Constant
+      Name		      "Constant"
+      Position		      [20, 110, 50, 140]
+      Value		      "1"
+    }
+    Block {
+      BlockType		      Display
+      Name		      "Curvatura"
+      Ports		      [1, 0, 0, 0, 0]
+      Position		      [140, 25, 230, 55]
+      Format		      "short"
+      Decimation	      "1"
+      Floating		      off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Modelo vehículo"
+      Ports		      [2, 3, 0, 0, 0]
+      Position		      [110, 94, 220, 216]
+      ShowPortLabels	      on
+      MaskPromptString	      "Valor inicial de la coordenada x:|Valor inicial"
+" de la coordenada y:|Valor inicial de la orientación:"
+      MaskStyleString	      "edit,edit,edit"
+      MaskTunableValueString  "on,on,on"
+      MaskCallbackString      "||"
+      MaskEnableString	      "on,on,on"
+      MaskVisibilityString    "on,on,on"
+      MaskVariables	      "x_inicial=@1;y_inicial=@2;phi_inicial=@3;"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "0|0.5|0"
+      System {
+	Name			"Modelo vehículo"
+	Location		[372, 232, 1118, 607]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "v"
+	  Position		  [65, 123, 95, 137]
+	  Port			  "1"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Curvatura"
+	  Position		  [65, 163, 95, 177]
+	  Port			  "2"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain"
+	  Position		  [425, 135, 455, 165]
+	  Gain			  "-1"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [265, 135, 295, 165]
+	  ExternalReset		  "none"
+	  InitialConditionSource  "internal"
+	  InitialCondition	  "phi_inicial"
+	  LimitOutput		  off
+	  UpperSaturationLimit	  "inf"
+	  LowerSaturationLimit	  "-inf"
+	  ShowSaturationPort	  off
+	  ShowStatePort		  off
+	  AbsoluteTolerance	  "auto"
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator1"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [565, 115, 595, 145]
+	  ExternalReset		  "none"
+	  InitialConditionSource  "internal"
+	  InitialCondition	  "x_inicial"
+	  LimitOutput		  off
+	  UpperSaturationLimit	  "inf"
+	  LowerSaturationLimit	  "-inf"
+	  ShowSaturationPort	  off
+	  ShowStatePort		  off
+	  AbsoluteTolerance	  "auto"
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator2"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [565, 235, 595, 265]
+	  ExternalReset		  "none"
+	  InitialConditionSource  "internal"
+	  InitialCondition	  "y_inicial"
+	  LimitOutput		  off
+	  UpperSaturationLimit	  "inf"
+	  LowerSaturationLimit	  "-inf"
+	  ShowSaturationPort	  off
+	  ShowStatePort		  off
+	  AbsoluteTolerance	  "auto"
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [160, 110, 205, 190]
+	  Inputs		  "2"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product1"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [490, 83, 535, 172]
+	  Inputs		  "2"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product2"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [490, 203, 535, 292]
+	  Inputs		  "2"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Trigonometry
+	  Name			  "Trigonometric\nFunction"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [355, 135, 385, 165]
+	  Operator		  "sin"
+	  OutputSignalType	  "auto"
+	}
+	Block {
+	  BlockType		  Trigonometry
+	  Name			  "Trigonometric\nFunction1"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [355, 210, 385, 240]
+	  Operator		  "cos"
+	  OutputSignalType	  "auto"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "x"
+	  Position		  [635, 123, 665, 137]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "y"
+	  Position		  [635, 243, 665, 257]
+	  Port			  "2"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "phi"
+	  Position		  [640, 308, 670, 322]
+	  Port			  "3"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  "Curvatura"
+	  SrcPort		  1
+	  DstBlock		  "Product"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  DstBlock		  "Integrator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Integrator"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    DstBlock		    "Trigonometric\nFunction"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 75]
+	    Branch {
+	      DstBlock		      "Trigonometric\nFunction1"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, 90]
+	      DstBlock		      "phi"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Trigonometric\nFunction"
+	  SrcPort		  1
+	  DstBlock		  "Gain"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Gain"
+	  SrcPort		  1
+	  DstBlock		  "Product1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "v"
+	  SrcPort		  1
+	  Points		  [25, 0]
+	  Branch {
+	    DstBlock		    "Product"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -25]
+	    DstBlock		    "Product1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 140]
+	    DstBlock		    "Product2"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "Trigonometric\nFunction1"
+	  SrcPort		  1
+	  DstBlock		  "Product2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product1"
+	  SrcPort		  1
+	  DstBlock		  "Integrator1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product2"
+	  SrcPort		  1
+	  DstBlock		  "Integrator2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Integrator2"
+	  SrcPort		  1
+	  DstBlock		  "y"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Integrator1"
+	  SrcPort		  1
+	  DstBlock		  "x"
+	  DstPort		  1
+	}
+	Annotation {
+	  Position		  [223, 137]
+	  Text			  "phi '"
+	}
+	Annotation {
+	  Position		  [311, 137]
+	  Text			  "phi"
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Pure Pursuit II"
+      Ports		      [3, 1, 0, 0, 0]
+      Position		      [285, 98, 400, 212]
+      ShowPortLabels	      on
+      MaskType		      "Pure Pursuit II"
+      MaskDescription	      "Este bloque se encarga de calcular la curvatura"
+" que es necesario suministrar al vehículo cuando se emplea la técnica de pers"
+"ecución pura con el parámetro look-ahead (L) variable en función del punto ob"
+"jetivo."
+      MaskPromptString	      "Coordenadas x del camino:|Coordenadas y del cam"
+"ino:|Distancia sobre el camino (s):"
+      MaskStyleString	      "edit,edit,edit"
+      MaskTunableValueString  "on,on,on"
+      MaskCallbackString      "||"
+      MaskEnableString	      "on,on,on"
+      MaskVisibilityString    "on,on,on"
+      MaskVariables	      "x_camino=@1;y_camino=@2;s=@3;"
+      MaskInitialization      "global K_ANT\nglobal INDEX\nK_ANT=1;\nfor k=1:l"
+"ength(x_camino)-1\n   acum(k)=0;\n   for w=k:length(x_camino)-1\n      dist_e"
+"ntre_puntos=sqrt( (x_camino(w)-x_camino(w+1))^2 + (y_camino(w)-y_camino(w+1))"
+"^2 );\n      acum(w+1)=acum(w)+dist_entre_puntos;\n   end\n   dif=abs(acum-s)"
+";\n   [z,indice] = min(dif);\n   INDEX(k)=indice;\nend\n"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "x|y|s"
+      System {
+	Name			"Pure Pursuit II"
+	Location		[79, 85, 755, 564]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "x_vehículo"
+	  Position		  [55, 93, 85, 107]
+	  Port			  "1"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "y_vehículo"
+	  Position		  [55, 123, 85, 137]
+	  Port			  "2"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "phi_vehículo"
+	  Position		  [55, 213, 85, 227]
+	  Port			  "3"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  " "
+	  Position		  [40, 60, 95, 80]
+	  Value			  "y_camino"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "  "
+	  Position		  [40, 30, 95, 50]
+	  Value			  "x_camino"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Cálculo\nde L"
+	  Ports			  [4, 1, 0, 0, 0]
+	  Position		  [485, 245, 575, 325]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  SourceBlock		  "HEMERO/Robots\nmóviles/Control de\nrobots m"
+"óviles/Métodos\ngeométricos/Pure Pursuit II/Cálculo\nde L"
+	  SourceType		  "SubSystem"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Cálculo de\nincremento de x"
+	  Ports			  [5, 1, 0, 0, 0]
+	  Position		  [322, 240, 438, 365]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  SourceBlock		  "HEMERO/Robots\nmóviles/Control de\nrobots m"
+"óviles/Métodos\ngeométricos/Pure Pursuit II/Cálculo de\nincremento de x"
+	  SourceType		  "SubSystem"
+	}
+	Block {
+	  BlockType		  Fcn
+	  Name			  "Fcn"
+	  Position		  [500, 340, 560, 370]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  Expr			  "2/(u^2)"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain1"
+	  Position		  [265, 420, 295, 450]
+	  Orientation		  "left"
+	  NamePlacement		  "alternate"
+	  Gain			  "-1"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux"
+	  Ports			  [5, 1, 0, 0, 0]
+	  Position		  [175, 22, 200, 178]
+	  ShowName		  off
+	  Inputs		  "5"
+	  DisplayOption		  "none"
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [428, 395, 477, 430]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  Inputs		  "2"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "Se calcula del índice del \npunto que está "
+"a distancia s\nsobre el camino desde el \npunto del camino más\npróximo (pure"
+"_p_II.m)"
+	  Position		  [240, 85, 300, 115]
+	  MATLABFcn		  "pure_p_II"
+	  OutputWidth		  "-1"
+	  OutputSignalType	  "auto"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "dist sobre\nel camino"
+	  Position		  [125, 145, 155, 175]
+	  Value			  "s"
+	}
+	Block {
+	  BlockType		  Lookup
+	  Name			  "x_camino"
+	  Position		  [390, 130, 420, 160]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  InputValues		  "1:length(x_camino)"
+	  OutputValues		  "x_camino"
+	}
+	Block {
+	  BlockType		  Lookup
+	  Name			  "y_camino"
+	  Position		  [505, 130, 535, 160]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  InputValues		  "1:length(y_camino)"
+	  OutputValues		  "y_camino"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "curvatura"
+	  Position		  [60, 430, 90, 440]
+	  Orientation		  "left"
+	  NamePlacement		  "alternate"
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  "Se calcula del índice del \npunto que está "
+"a distancia s\nsobre el camino desde el \npunto del camino más\npróximo (pure"
+"_p_II.m)"
+	  SrcPort		  1
+	  Points		  [100, 0]
+	  Branch {
+	    Points		    [115, 0]
+	    DstBlock		    "y_camino"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "x_camino"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Gain1"
+	  SrcPort		  1
+	  DstBlock		  "curvatura"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  DstBlock		  "Gain1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "  "
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " "
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "x_vehículo"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    DstBlock		    "Mux"
+	    DstPort		    3
+	  }
+	  Branch {
+	    Points		    [0, 90; 275, 0]
+	    Branch {
+	      DstBlock		      "Cálculo de\nincremento de x"
+	      DstPort		      3
+	    }
+	    Branch {
+	      Points		      [160, 0]
+	      DstBlock		      "Cálculo\nde L"
+	      DstPort		      3
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "y_vehículo"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    DstBlock		    "Mux"
+	    DstPort		    4
+	  }
+	  Branch {
+	    Points		    [0, 70; 310, 0]
+	    Branch {
+	      DstBlock		      "Cálculo de\nincremento de x"
+	      DstPort		      4
+	    }
+	    Branch {
+	      Points		      [155, 0]
+	      DstBlock		      "Cálculo\nde L"
+	      DstPort		      4
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "dist sobre\nel camino"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "Mux"
+	  SrcPort		  1
+	  DstBlock		  "Se calcula del índice del \npunto que está "
+"a distancia s\nsobre el camino desde el \npunto del camino más\npróximo (pure"
+"_p_II.m)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Cálculo de\nincremento de x"
+	  SrcPort		  1
+	  Points		  [0, 10]
+	  DstBlock		  "Product"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "phi_vehículo"
+	  SrcPort		  1
+	  Points		  [340, 0]
+	  DstBlock		  "Cálculo de\nincremento de x"
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "Fcn"
+	  SrcPort		  1
+	  Points		  [0, 5]
+	  DstBlock		  "Product"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Cálculo\nde L"
+	  SrcPort		  1
+	  DstBlock		  "Fcn"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "y_camino"
+	  SrcPort		  1
+	  Points		  [0, 15]
+	  Branch {
+	    Points		    [-165, 0]
+	    DstBlock		    "Cálculo de\nincremento de x"
+	    DstPort		    2
+	  }
+	  Branch {
+	    DstBlock		    "Cálculo\nde L"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "x_camino"
+	  SrcPort		  1
+	  Points		  [0, 5]
+	  Branch {
+	    Points		    [-75, 0]
+	    DstBlock		    "Cálculo de\nincremento de x"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [95, 0]
+	    DstBlock		    "Cálculo\nde L"
+	    DstPort		    1
+	  }
+	}
+      }
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace"
+      Position		      [320, 313, 360, 327]
+      VariableName	      "x_v"
+      Buffer		      "inf"
+      Decimation	      "1"
+      SampleTime	      "-1"
+      SaveFormat	      "Matrix"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace1"
+      Position		      [320, 283, 360, 297]
+      VariableName	      "y_v"
+      Buffer		      "inf"
+      Decimation	      "1"
+      SampleTime	      "-1"
+      SaveFormat	      "Matrix"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace3"
+      Position		      [320, 238, 360, 252]
+      VariableName	      "phi_v"
+      Buffer		      "inf"
+      Decimation	      "1"
+      SampleTime	      "-1"
+      SaveFormat	      "Matrix"
+    }
+    Line {
+      SrcBlock		      "Constant"
+      SrcPort		      1
+      DstBlock		      "Modelo vehículo"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Modelo vehículo"
+      SrcPort		      1
+      Points		      [5, 0]
+      Branch {
+	Points			[0, 205]
+	DstBlock		"To Workspace"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"Pure Pursuit II"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Pure Pursuit II"
+      SrcPort		      1
+      Points		      [15, 0; 0, 120; -325, 0; 0, -90]
+      Branch {
+	DstBlock		"Modelo vehículo"
+	DstPort			2
+      }
+      Branch {
+	Points			[0, -145]
+	DstBlock		"Curvatura"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Modelo vehículo"
+      SrcPort		      2
+      Points		      [15, 0]
+      Branch {
+	Points			[0, 135]
+	DstBlock		"To Workspace1"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"Pure Pursuit II"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "Modelo vehículo"
+      SrcPort		      3
+      Points		      [25, 0; 0, 0]
+      Branch {
+	DstBlock		"Pure Pursuit II"
+	DstPort			3
+      }
+      Branch {
+	Points			[0, 50]
+	DstBlock		"To Workspace3"
+	DstPort			1
+      }
+    }
+  }
+}
