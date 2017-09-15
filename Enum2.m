@@ -14,7 +14,7 @@ init = [8; -4; 12; 1];
 % ejecutamos el movimiento
 r_uvw = transl(-3, 10, 10);
 giro1 = RotX(mNoventa);
-giro2 = RotZ(noventa);
+giro2 = RotY(noventa);
 
 % la matriz homogenea que se usara para graficar el eje final
 mHom = r_uvw * giro1 * giro2;
