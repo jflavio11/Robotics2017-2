@@ -1,5 +1,6 @@
 %{
     Rotación en el eje X
+    author: joseflavio
 %}
 function R = RotX(a)
 

@@ -1,5 +1,6 @@
 %{
     Tralasción
+    author: joseflavio
 %}
 function T = Trasl(a,b,c)
 

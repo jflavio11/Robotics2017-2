@@ -1,5 +1,6 @@
 %{
     Rotación en el eje Z
+    author: joseflavio
 %}
 function R = RotZ(c)
 
