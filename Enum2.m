@@ -1,4 +1,4 @@
-path(path, 'D:\robotica\robotica02\ToolBox_Hemero')
+path(path, '\ToolBox_Hemero')
 %{
     Obtener la matriz de transformación que representa las siguientes transformaciones 
     sobre un sistema OXYZ fijo de referencia: traslación de un vector pxyz(-3,10,10);

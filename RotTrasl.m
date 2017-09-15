@@ -1,4 +1,4 @@
-path(path, 'D:\robotica\robotica02\ToolBox_Hemero')
+path(path, '\ToolBox_Hemero')
 %{
     Rotacion y traslacion
     Este script de ejemplo permite rotar un sistema de coordenadas

@@ -1,4 +1,4 @@
-path(path, 'D:\robotica\robotica02\ToolBox_Hemero')
+path(path, '\ToolBox_Hemero')
 %{
     Se quiere obtener la matriz de transformación que representa al sistema 
     O’UVW obtenido a partir del sistema OXYZ mediante un giro de ángulo –90° 
