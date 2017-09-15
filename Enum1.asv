@@ -6,8 +6,8 @@ path(path, '\ToolBox_Hemero')
     de 90° sobre el eje OZ.
 
     Nota: como el movimiento sí es con respecto a un sistema quieto(OXYZ),
-    el movimiento se ejecuta de manera inversa: 
-        rotación en OZ(90) -> traslación -> rotación en OX(-90).
+    el movimiento se ejecuta de manera inversa: rotación en Z -> traslación
+    -> r
 %}
 
 % se define en orden las funciones

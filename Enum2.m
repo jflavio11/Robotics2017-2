@@ -4,6 +4,10 @@ path(path, '\ToolBox_Hemero')
     sobre un sistema OXYZ fijo de referencia: traslación de un vector pxyz(-3,10,10);
     giro de –90° sobre el eje ‘OU del sistema trasladado y un giro de 90°sobre 
     el eje O’V del sistema girado.
+
+
+    Nota: como el movimiento no es con respecto a un sistema quieto (OXYZ),
+    sino móvil (OUVW), se ejecuta el movimiento en el orden del enunciado.
 %}
 
 % se define en orden las funciones
@@ -23,12 +27,12 @@ mHom = r_uvw * giro1 * giro2;
 TA = [1 0 0 0; 0 1 0 0; 0 0 1 0; 0 0 0 1];
 r_uvw = r_uvw*TA;
 
-% vector resultande, posición final del eje
+% vector resultande, posición final del eje con respecto a OXYZ
 vRultante = mHom * init;
 
 figure;
 % graficamos nuestro sistema de referencia en 0,0,0
-frame(TA, 'b', 5)
+frame(TA, 'b', 10)
 
 % ahora graficamos ouvw
 % se grafica la traslación
