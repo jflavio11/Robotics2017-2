@@ -3,7 +3,7 @@
     the command prompt writting: robot01(yourAngle).
     'angle' parameter is the angle measured in degrees.
 %}
-function robot01(angle)
+function robot1(angle)
 
 path(path, '..\ToolBox_Hemero')
 path(path, '..\simpleMovs')
