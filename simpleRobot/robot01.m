@@ -1,3 +1,7 @@
+%{
+    Draws a robot arm on the YZ plane. This function must be called from
+    the command prompt writting: robot01(yourAngle, theLongitude).
+%}
 function robot01(angle, longitude)
 
 path(path, '..\ToolBox_Hemero')
