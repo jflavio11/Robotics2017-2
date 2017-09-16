@@ -1,5 +1,5 @@
 %{
-    Rotación en el eje Y
+    Rotation on the Y axis. 'b' parameter is the angle given in radians.
 %}
 function R = RotY(b)
 

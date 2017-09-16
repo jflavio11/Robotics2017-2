@@ -1,5 +1,5 @@
 %{
-    Rotación en el eje Z
+    Rotation on the Z axis. 'c' parameter is the angle given in radians.
     author: joseflavio
 %}
 function R = RotZ(c)

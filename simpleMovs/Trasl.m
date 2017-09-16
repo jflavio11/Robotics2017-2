@@ -1,5 +1,5 @@
 %{
-    Tralasción
+    For translation on X, Y, Z given by parameters a, b, c
     author: joseflavio
 %}
 function T = Trasl(a,b,c)

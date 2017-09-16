@@ -1,5 +1,5 @@
 %{
-    Rotación en el eje X
+    Rotation on the X axis. 'a' parameter is the angle given in radians.
     author: joseflavio
 %}
 function R = RotX(a)
