@@ -1,4 +1,4 @@
-path(path, '\ToolBox_Hemero')
+path(path, '.\ToolBox_Hemero')
 %{
     Obtener la matriz de transformación que representa las siguientes transformaciones 
     sobre un sistema OXYZ fijo de referencia: traslación de un vector pxyz(-3,10,10);
@@ -30,8 +30,8 @@ r_uvw = r_uvw*TA;
 % vector resultande, posición final del eje con respecto a OXYZ
 vRultante = mHom * init;
 
-figure;
 % graficamos nuestro sistema de referencia en 0,0,0
+figure;
 frame(TA, 'b', 10)
 
 % ahora graficamos ouvw
