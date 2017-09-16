@@ -1,4 +1,6 @@
 path(path, '.\ToolBox_Hemero')
+path(path, '.\simpleMovs')
+path(path, '.\simpleMovs\rotations')
 %{
 
 1. Teniendo un sistema de coordenadas O'UVW ha sido trasladado inicialmente a r(2,2,0)

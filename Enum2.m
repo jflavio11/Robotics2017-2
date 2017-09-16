@@ -1,4 +1,6 @@
 path(path, '.\ToolBox_Hemero')
+path(path, '.\simpleMovs')
+path(path, '.\simpleMovs\rotations')
 %{
     Obtener la matriz de transformación que representa las siguientes transformaciones 
     sobre un sistema OXYZ fijo de referencia: traslación de un vector pxyz(-3,10,10);
